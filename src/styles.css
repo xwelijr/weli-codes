@@ -82,11 +82,11 @@ img {
 }
 
 .section {
-  padding-block: 56px;
+  padding-block: 48px;
 }
 @media (min-width: 640px) {
   .section {
-    padding-block: 96px;
+    padding-block: 72px;
   }
 }
 
@@ -326,11 +326,11 @@ a:hover {
 /* ————— Hero ————— */
 
 .hero {
-  padding-block: 56px;
+  padding-block: 48px;
 }
 @media (min-width: 640px) {
   .hero {
-    padding-block: 96px;
+    padding-block: 72px;
   }
 }
 @media (min-width: 1024px) {
@@ -428,7 +428,6 @@ a:hover {
   max-width: 65ch;
 }
 .skills-split {
-  margin-top: 48px;
   display: grid;
   gap: 48px;
 }
@@ -476,7 +475,7 @@ a:hover {
 
 .project-separator {
   border-top: 1px solid var(--border);
-  margin-block: 40px;
+  margin-block: 32px;
 }
 .project {
   display: grid;

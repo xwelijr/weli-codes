@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import {
   site,
-  about,
   whatIDo,
   skillGroups,
   metricStrings,
@@ -319,7 +318,6 @@ export default function App() {
           </div>
           <h2 id="skills-heading">Skills &amp; stack</h2>
           <div className="section-content">
-            <p className="about">{about}</p>
             <div className="skills-split">
               <div className="whatido">
                 {whatIDo.map((line) => (

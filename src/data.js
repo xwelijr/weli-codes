@@ -3,7 +3,7 @@ export const site = {
   eyebrow: 'System Administrator · Jakarta, Indonesia',
   name: ['Welli', 'Irawan'],
   positioning:
-    "I run production infrastructure for PT Asuransi Raksa Pratikara: Oracle databases replicated across three cities, monitoring that catches problems before users do, and automation that keeps deployments boring. Right now I'm rebuilding the company's 20-year-old HR platform for the modern web.",
+    "I run infrastructure at PT Asuransi Raksa Pratikara: Oracle databases replicated across three cities. Right now, rebuilding the company's 20-year-old HR platform.",
   status: {
     lead: 'Operational',
     rest: ' — open to sysadmin / devops / sre roles · Jakarta · UTC+7',
@@ -18,13 +18,10 @@ export const site = {
   },
 }
 
-export const about =
-  'System administrator at PT Asuransi Raksa Pratikara, an insurance company in Jakarta. My job is to make infrastructure uneventful: databases that fail over cleanly, dashboards that tell the truth, and deployments that don’t need a human standing by. Currently deep in a legacy modernization — reverse-engineering a 20-year-old PHP HR system and rebuilding it on React and Laravel, with a real pipeline from dev to production.'
-
 export const whatIDo = [
-  'Run production infrastructure — Windows Server, Linux, VMware, and Oracle databases replicated across three sites.',
-  'Build monitoring teams actually trust — Grafana and Prometheus dashboards that surface real problems and page only when it matters.',
-  'Automate the repetitive — deployment pipelines and internal tools that take manual work off people’s plates.',
+  'Production infrastructure: Windows Server, Linux, VMware, Oracle.',
+  'Grafana and Prometheus dashboards that page only when it matters.',
+  'Deployment pipelines and internal tools that cut manual work.',
 ]
 
 export const skillGroups = [
@@ -64,11 +61,10 @@ export const projects = [
     org: 'PT Asuransi Raksa Pratikara',
     tags: ['Legacy PHP', 'Docker', 'React', 'Laravel', 'Reverse engineering'],
     summary:
-      'A 20-year-old PHP HR system that every employee depends on — undocumented, and impossible to run anywhere but production. I reverse-engineered it, made it reproducible, and am now rebuilding it on a modern stack.',
+      'Reverse-engineered the company’s undocumented PHP HR system. Now rebuilding it on React and Laravel.',
     highlights: [
-      'Reverse-engineered two decades of undocumented legacy PHP to map how the system actually behaves.',
-      'Built a reproducible Docker runtime that boots the full application against production database dumps, writing PHP 7.4 compatibility shims so it runs identically on any machine.',
-      'Now migrating the platform to React + Laravel without interrupting the live system.',
+      'Got the 20-year-old app booting in Docker against production database dumps.',
+      'Wrote PHP 7.4 compatibility shims. No source edits.',
     ],
     status: { text: 'Status: Ongoing', variant: 'amber' },
     evidence: 'code',
@@ -79,12 +75,10 @@ export const projects = [
     period: '2025 — 2026',
     org: 'PT Asuransi Raksa Pratikara',
     tags: ['CI/CD', 'Linode', 'Environments', 'Deployment pipeline'],
-    summary:
-      'The modernization needed a safe path to production. I built it: a test database, a dedicated dev environment, and a deployment pipeline out to Linode — so changes are proven before they touch the live HR system.',
+    summary: 'Built the test-and-deploy path for the eHRD rebuild.',
     highlights: [
-      'Stood up a test database so changes are validated against real data shapes before release.',
-      'Built the dev environment at ehrd.dev.rks-a.com as a staging ground ahead of production.',
-      'Wired the deployment pipeline from dev through to production on Linode — Phase 1 (environments + pipeline) is live.',
+      'Test database and dev environment at ehrd.dev.rks-a.com.',
+      'Pipeline runs dev to production on Linode. Phase 1 is live.',
     ],
     status: { text: 'Status: Phase 1 shipped', variant: 'green' },
     evidence: 'pipeline',
@@ -96,11 +90,10 @@ export const projects = [
     org: 'PT Asuransi Raksa Pratikara',
     tags: ['AWS EC2', 'AWS Lambda', 'VPC', 'Database environments'],
     summary:
-      'RKS-M and RKS-W are the core applications behind Raksa’s systems — and for many years, programmers had no test environment for them: every database change had to be proven against production. I built one on AWS.',
+      'Developers tested RKS-M and RKS-W database changes against production, so I built test environments on AWS.',
     highlights: [
-      'Stood up dedicated database test environments on AWS EC2 for both core apps — the first the dev team has had in years.',
-      'Integrated the test databases with AWS Lambda and configured the VPC networking so functions reach the databases securely.',
-      'Developers now validate schema and data changes safely before anything touches the live systems.',
+      'Test databases on AWS EC2, wired to Lambda through the VPC.',
+      'The first test environment the dev team has had in years.',
     ],
     status: { text: 'Status: In use', variant: 'green' },
     evidence: 'none',
@@ -112,11 +105,10 @@ export const projects = [
     org: 'PT Asuransi Raksa Pratikara',
     tags: ['Internal web app', 'Excel export', 'Oracle reports', 'Trilingual UI'],
     summary:
-      'Oracle reports come out as clunky HTML files that teams then reworked by hand. I built the internal web app that turns them into clean Excel — drag, drop, done — with an Indonesian, English, and Chinese UI.',
+      'Internal web app that converts Oracle HTML reports to Excel, with an Indonesian, English, and Chinese UI.',
     highlights: [
-      '4,700+ files converted by internal teams — about as clear as usefulness gets.',
-      'Batch-friendly: drop multiple reports at once and get a single zip back; jobs up to 1 GB.',
-      'Nothing stored: files are processed on an internal server and deleted the moment the result is downloaded.',
+      '4,700+ files converted so far.',
+      'Batch jobs up to 1 GB. Files deleted after download.',
     ],
     status: { text: 'Status: In daily use', variant: 'green' },
     evidence: 'image',
@@ -134,12 +126,10 @@ export const projects = [
     period: '2025 — Present',
     org: 'PT Asuransi Raksa Pratikara',
     tags: ['Grafana', 'Prometheus', 'AWS RDS', 'CloudWatch', 'Alerting'],
-    summary:
-      'Before this, checking system health meant logging into servers one by one. I built the Grafana platform that puts infrastructure, database, and network health on a single set of dashboards — now spanning both the internal fleet and AWS.',
+    summary: 'Grafana and Prometheus dashboards for the internal server fleet and AWS.',
     highlights: [
-      'One Grafana, two worlds: the internal server fleet and the AWS cloud environment monitored side by side.',
-      'Watches RDS databases with a metrics configuration deliberately tuned to keep the CloudWatch bill at $0.',
-      'Rebuilt alert routing so pages reach the right person with the right context — faster incident response, less noise.',
+      'RDS monitoring tuned to keep the CloudWatch bill at $0.',
+      'Rebuilt alert routing so pages reach the right person.',
     ],
     status: { text: 'Status: In production', variant: 'green' },
     evidence: 'image',
@@ -159,11 +149,10 @@ export const projects = [
     org: 'PT Asuransi Raksa Pratikara',
     tags: ['ManageEngine', 'Endpoint security', 'DLP', 'Device control'],
     summary:
-      'Open USB ports are one of the easiest ways for data to leave an insurance company — or for malware to walk in. I researched, evaluated, and implemented ManageEngine device control to close that gap across company endpoints.',
+      'Evaluated and rolled out ManageEngine device control to lock down USB ports on company endpoints.',
     highlights: [
-      'Rolled out policy-based device access control: unauthorized removable storage is blocked by default.',
-      'Trusted-device allowlisting and temporary, auto-expiring access keep legitimate USB use working — security without a daily fight with users.',
-      'Every device connection attempt is logged and reported, turning USB activity from a blind spot into an audit trail.',
+      'Unauthorized removable storage is blocked by default.',
+      'Temporary access auto-expires. Every connection attempt logged.',
     ],
     status: { text: 'Status: Implemented', variant: 'green' },
     evidence: 'none',
@@ -174,12 +163,10 @@ export const projects = [
     period: '2025',
     org: 'PT Asuransi Raksa Pratikara',
     tags: ['Oracle Data Guard', 'Windows Server', 'Multi-site DR'],
-    summary:
-      'An insurer cannot lose its databases. I implemented Oracle Data Guard across three sites — Jakarta, Bandung, and Surabaya — so a failure in one city doesn’t take the company down.',
+    summary: 'Implemented Oracle Data Guard across Jakarta, Bandung, and Surabaya.',
     highlights: [
-      'Configured real-time redo log shipping across the three DRC sites.',
-      'Kept standby databases synchronized with the primary at all times.',
-      'Tested failover until it was routine, not a gamble.',
+      'Real-time redo log shipping across the three DRC sites.',
+      'Tested failover until it was routine.',
     ],
     status: { text: 'Status: In production', variant: 'green' },
     evidence: 'gallery',
@@ -227,7 +214,7 @@ export const principles = [
 ]
 
 export const contactIntro = {
-  before: 'Based in Jakarta, Indonesia (GMT+7). Open to sysadmin, DevOps, and SRE conversations — email is fastest, LinkedIn works too, and the code lives at ',
+  before: 'Based in Jakarta (GMT+7). Email is fastest, LinkedIn works too. Code at ',
   linkText: 'github.com/xwelijr',
   after: '.',
 }
