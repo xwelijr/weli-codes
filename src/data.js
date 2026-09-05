@@ -8,7 +8,7 @@ export const site = {
     lead: 'Operational',
     rest: ' — open to sysadmin / devops / sre roles · Jakarta · UTC+7',
   },
-  facts: ['3 DR sites', 'Hours → minutes provisioning', '20-yr legacy system in Docker'],
+  facts: ['3 DR sites', '$0 CloudWatch bill', '20-yr legacy system in Docker'],
   links: {
     email: 'weliirawanxd@gmail.com',
     phone: '+62 896 5076 7958',
@@ -24,18 +24,18 @@ export const about =
 export const whatIDo = [
   'Run production infrastructure — Windows Server, Linux, VMware, and Oracle databases replicated across three sites.',
   'Build monitoring teams actually trust — Grafana and Prometheus dashboards that surface real problems and page only when it matters.',
-  'Automate the repetitive — Ansible playbooks and deployment pipelines that turn manual hours into minutes.',
+  'Automate the repetitive — deployment pipelines and internal tools that take manual work off people’s plates.',
 ]
 
 export const skillGroups = [
   { label: 'OS & Virtualization', skills: ['Linux', 'Windows Server', 'VMware', 'Networking'] },
   { label: 'Containers & Cloud', skills: ['Docker', 'Kubernetes', 'AWS', 'Azure'] },
   { label: 'Observability', skills: ['Grafana', 'Prometheus'] },
-  { label: 'Automation & Databases', skills: ['Ansible', 'PowerShell', 'Oracle DB'] },
+  { label: 'Automation & Databases', skills: ['PowerShell', 'AWS Lambda', 'Oracle DB'] },
 ]
 
 // Metric strings wrapped in <strong class="metric"> at render time — only these.
-export const metricStrings = ['PHP 7.4', 'hours to minutes', 'three DRC sites', '20-year-old', '4,700+', '$0']
+export const metricStrings = ['PHP 7.4', 'three DRC sites', '20-year-old', '4,700+', '$0']
 
 export const ehrdCode = `# docker-compose.yml — 20-yr-old eHRD, reproducible anywhere
 services:
@@ -131,7 +131,7 @@ export const projects = [
   {
     id: 'grafana-monitoring',
     title: 'Grafana Monitoring Platform',
-    period: '2023 — Present',
+    period: '2025 — Present',
     org: 'PT Asuransi Raksa Pratikara',
     tags: ['Grafana', 'Prometheus', 'AWS RDS', 'CloudWatch', 'Alerting'],
     summary:
@@ -153,9 +153,25 @@ export const projects = [
     flipped: true,
   },
   {
+    id: 'usb-device-control',
+    title: 'Endpoint USB Control with ManageEngine',
+    period: '2026',
+    org: 'PT Asuransi Raksa Pratikara',
+    tags: ['ManageEngine', 'Endpoint security', 'DLP', 'Device control'],
+    summary:
+      'Open USB ports are one of the easiest ways for data to leave an insurance company — or for malware to walk in. I researched, evaluated, and implemented ManageEngine device control to close that gap across company endpoints.',
+    highlights: [
+      'Rolled out policy-based device access control: unauthorized removable storage is blocked by default.',
+      'Trusted-device allowlisting and temporary, auto-expiring access keep legitimate USB use working — security without a daily fight with users.',
+      'Every device connection attempt is logged and reported, turning USB activity from a blind spot into an audit trail.',
+    ],
+    status: { text: 'Status: Implemented', variant: 'green' },
+    evidence: 'none',
+  },
+  {
     id: 'disaster-recovery',
     title: 'Disaster Recovery Infrastructure',
-    period: '2023',
+    period: '2025',
     org: 'PT Asuransi Raksa Pratikara',
     tags: ['Oracle Data Guard', 'Windows Server', 'Multi-site DR'],
     summary:
@@ -193,21 +209,6 @@ export const projects = [
       ],
     },
   },
-  {
-    id: 'provisioning-automation',
-    title: 'Provisioning Automation',
-    period: '2023',
-    org: 'PT Asuransi Raksa Pratikara',
-    tags: ['Ansible', 'Python', 'PowerShell'],
-    summary:
-      'Server setup used to be a manual checklist that took hours and drifted between machines. I replaced it with reusable Ansible playbooks.',
-    highlights: [
-      'Cut routine provisioning from hours to minutes.',
-      'Playbooks double as documentation — the setup procedure is code: versioned, reviewed, repeatable.',
-    ],
-    status: { text: 'Status: In daily use', variant: 'green' },
-    evidence: 'none',
-  },
 ]
 
 export const principles = [
@@ -217,7 +218,7 @@ export const principles = [
   },
   {
     label: 'Automation',
-    text: 'Do it by hand once, script it forever. The playbook is the documentation. Scale confidence, not just capacity.',
+    text: 'Do it by hand once, script it forever. The script is the documentation. Scale confidence, not just capacity.',
   },
   {
     label: 'Resilience',

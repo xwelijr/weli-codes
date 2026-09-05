@@ -349,7 +349,7 @@ export default function App() {
             <p className="eyebrow">
               <span className="section-index">02</span> — Selected work
             </p>
-            <p className="section-meta">2023 — 2026</p>
+            <p className="section-meta">2025 — 2026</p>
           </div>
           <h2 id="work-heading">Projects</h2>
           <div className="section-content">
