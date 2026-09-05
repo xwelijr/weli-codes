@@ -35,7 +35,7 @@ export const skillGroups = [
 ]
 
 // Metric strings wrapped in <strong class="metric"> at render time — only these.
-export const metricStrings = ['PHP 7.4', 'hours to minutes', 'three DRC sites', '20-year-old']
+export const metricStrings = ['PHP 7.4', 'hours to minutes', 'three DRC sites', '20-year-old', '4,700+']
 
 export const ehrdCode = `# docker-compose.yml — 20-yr-old eHRD, reproducible anywhere
 services:
@@ -88,6 +88,29 @@ export const projects = [
     ],
     status: { text: 'Status: Phase 1 shipped', variant: 'green' },
     evidence: 'pipeline',
+  },
+  {
+    id: 'report-converter',
+    title: 'Oracle Report to Excel',
+    period: '2026',
+    org: 'PT Asuransi Raksa Pratikara',
+    tags: ['Internal web app', 'Excel export', 'Oracle reports', 'Trilingual UI'],
+    summary:
+      'Oracle reports come out as clunky HTML files that teams then reworked by hand. I built the internal web app that turns them into clean Excel — drag, drop, done — with an Indonesian, English, and Chinese UI.',
+    highlights: [
+      '4,700+ files converted by internal teams — about as clear as usefulness gets.',
+      'Batch-friendly: drop multiple reports at once and get a single zip back; jobs up to 1 GB.',
+      'Nothing stored: files are processed on an internal server and deleted the moment the result is downloaded.',
+    ],
+    status: { text: 'Status: In daily use', variant: 'green' },
+    evidence: 'image',
+    image: {
+      src: '/assets/report-converter.png',
+      width: 1902,
+      height: 858,
+      caption: 'Oracle Report to Excel — 4,700+ files converted',
+      alt: 'Internal Oracle Report to Excel converter showing a three-step drag-and-drop conversion flow with a live counter of files converted',
+    },
   },
   {
     id: 'disaster-recovery',
