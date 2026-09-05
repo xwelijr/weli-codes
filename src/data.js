@@ -90,6 +90,22 @@ export const projects = [
     evidence: 'pipeline',
   },
   {
+    id: 'rks-test-environment',
+    title: 'RKS-M & RKS-W Developer Test Environment',
+    period: '2026',
+    org: 'PT Asuransi Raksa Pratikara',
+    tags: ['AWS EC2', 'AWS Lambda', 'VPC', 'Database environments'],
+    summary:
+      'RKS-M and RKS-W are the core applications behind Raksa’s systems — and for many years, programmers had no test environment for them: every database change had to be proven against production. I built one on AWS.',
+    highlights: [
+      'Stood up dedicated database test environments on AWS EC2 for both core apps — the first the dev team has had in years.',
+      'Integrated the test databases with AWS Lambda and configured the VPC networking so functions reach the databases securely.',
+      'Developers now validate schema and data changes safely before anything touches the live systems.',
+    ],
+    status: { text: 'Status: In use', variant: 'green' },
+    evidence: 'none',
+  },
+  {
     id: 'report-converter',
     title: 'Oracle Report to Excel',
     period: '2026',
