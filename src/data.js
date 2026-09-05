@@ -35,7 +35,7 @@ export const skillGroups = [
 ]
 
 // Metric strings wrapped in <strong class="metric"> at render time — only these.
-export const metricStrings = ['PHP 7.4', 'hours to minutes', 'three DRC sites', '20-year-old', '4,700+']
+export const metricStrings = ['PHP 7.4', 'hours to minutes', 'three DRC sites', '20-year-old', '4,700+', '$0']
 
 export const ehrdCode = `# docker-compose.yml — 20-yr-old eHRD, reproducible anywhere
 services:
@@ -129,6 +129,30 @@ export const projects = [
     },
   },
   {
+    id: 'grafana-monitoring',
+    title: 'Grafana Monitoring Platform',
+    period: '2023 — Present',
+    org: 'PT Asuransi Raksa Pratikara',
+    tags: ['Grafana', 'Prometheus', 'AWS RDS', 'CloudWatch', 'Alerting'],
+    summary:
+      'Before this, checking system health meant logging into servers one by one. I built the Grafana platform that puts infrastructure, database, and network health on a single set of dashboards — now spanning both the internal fleet and AWS.',
+    highlights: [
+      'One Grafana, two worlds: the internal server fleet and the AWS cloud environment monitored side by side.',
+      'Watches RDS databases with a metrics configuration deliberately tuned to keep the CloudWatch bill at $0.',
+      'Rebuilt alert routing so pages reach the right person with the right context — faster incident response, less noise.',
+    ],
+    status: { text: 'Status: In production', variant: 'green' },
+    evidence: 'image',
+    image: {
+      src: '/assets/grafana-dashboard.png',
+      width: 1598,
+      height: 816,
+      caption: 'Grafana — infrastructure / database / network dashboards',
+      alt: 'Grafana dashboard showing infrastructure, database, and network health panels',
+    },
+    flipped: true,
+  },
+  {
     id: 'disaster-recovery',
     title: 'Disaster Recovery Infrastructure',
     period: '2023',
@@ -168,29 +192,6 @@ export const projects = [
         },
       ],
     },
-  },
-  {
-    id: 'grafana-monitoring',
-    title: 'Grafana Monitoring Platform',
-    period: '2023',
-    org: 'PT Asuransi Raksa Pratikara',
-    tags: ['Grafana', 'Prometheus', 'Alerting'],
-    summary:
-      'Before this, checking system health meant logging into servers one by one. I built the Grafana platform that puts infrastructure, database, and network health on a single set of dashboards.',
-    highlights: [
-      'Centralized visibility across infrastructure, databases, and the network.',
-      'Rebuilt alert routing so pages reach the right person with the right context — faster incident response, less noise.',
-    ],
-    status: { text: 'Status: In production', variant: 'green' },
-    evidence: 'image',
-    image: {
-      src: '/assets/grafana-dashboard.png',
-      width: 1598,
-      height: 816,
-      caption: 'Grafana — infrastructure / database / network dashboards',
-      alt: 'Grafana dashboard showing infrastructure, database, and network health panels',
-    },
-    flipped: true,
   },
   {
     id: 'provisioning-automation',
