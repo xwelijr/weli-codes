@@ -3,7 +3,7 @@ export const site = {
   eyebrow: 'System Administrator · Jakarta, Indonesia',
   name: ['Welli', 'Irawan'],
   positioning:
-    "Tech lead and project manager for the sysadmin team at PT Asuransi Raksa Pratikara. Oracle databases replicated across three cities. Right now, rebuilding the company's 20-year-old HR platform.",
+    "I run infrastructure at PT Asuransi Raksa Pratikara: Oracle databases replicated across three cities. Right now, rebuilding the company's 20-year-old HR platform.",
   status: {
     lead: 'Operational',
     rest: ' — open to sysadmin / devops / sre roles · Jakarta · UTC+7',
